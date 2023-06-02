@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="./Untitled_design__3_-removebg-preview.png" alt="">
+    </div>
+    
+</body>
+</html>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        background-image:url('./back.png');
+        background-size: cover;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        animation: back-color 5s infinite alternate-reverse;
+        
+    }
+    div{
+        height: 350px;
+        width: 350px;
+        /*background: linear-gradient(tomato, royalblue);*/
+        background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+        border-radius: 50%;
+        justify-self: center;
+        z-index: -1;
+        animation: rotate;
+        animation-duration: 2s;
+        animation-timing-function: ease-in;
+    }
+    img{
+        height: 49vh;
+        margin-left: -5rem;
+        margin-top: 1rem;
+        margin-right: -2rem;
+       
+       
+        animation: floating 2s infinite ease-in;
+        
+        
+
+    }
+    @keyframes rotate{
+        0%{
+            transform: rotate(0deg);
+        }
+        50%{
+            transform: rotate(30deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+    @keyframes floating{
+        0%{
+            transform: translateY(20px)
+        }
+        50%{
+            transform: translateY(-20px);
+        }
+        100%{
+            transform: translateY(20px);
+        }
+    }
+    @keyframes back-color{
+        0%{
+            background: #212121;
+            /*background-image: url(./Untitled_design__1_-removebg-preview\ \(1\).png);*/
+            background-repeat: no-repeat;
+            margin-left: 7rem;
+        }
+        100%{
+            background: white;
+            background-image: url(./back.png);
+            background: cover;
+        }
+
+    }
+    @keyframes falling-down{
+        0%{
+            transform: translateY(-500%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+</style>
+    
